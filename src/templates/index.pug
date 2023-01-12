@@ -1,0 +1,15 @@
+include header.pug
+
+    h1 web medium
+    div Welcome to web medium
+    div you can post whatever you want here. You won't hack it.
+    div our company is using 1. templates 2. dompurify.
+    div So don't even try anything bad. (If you find someone is doing bad things, please report it to us.)
+    p
+    if username
+        a(href="/posts") posts
+        p 
+        footer You are logged in as #{username}
+        include logout.pug
+    else 
+        include authenticate.pug
